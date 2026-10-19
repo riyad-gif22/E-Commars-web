@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>মশলা ঘর · Moshla Ghor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@600;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ea;--ink:#2b1a12;--muted:#6d5a4d;--turmeric:#e8a300;--tint:#fcebb8;--chili:#a42a14;--leaf:#2f5d3a;--card:#fffdf7;--line:#eadfc4;--btn:#a42a14;--btnink:#fff;--shadow:0 10px 28px rgba(80,45,10,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c130e;--ink:#f6ecd8;--muted:#bda994;--turmeric:#f0b429;--tint:#3a2a14;--chili:#ec7a5f;--leaf:#8fc79a;--card:#271a13;--line:#3d2b20;--btn:#f0b429;--btnink:#1c130e;--shadow:0 10px 28px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c130e;--ink:#f6ecd8;--muted:#bda994;--turmeric:#f0b429;--tint:#3a2a14;--chili:#ec7a5f;--leaf:#8fc79a;--card:#271a13;--line:#3d2b20;--btn:#f0b429;--btnink:#1c130e;--shadow:0 10px 28px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.75 "Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Noto Serif Bengali",Georgia,serif;line-height:1.35;margin:0}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:11}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1060px;margin:0 auto}
+.logo{font:800 1.4rem "Noto Serif Bengali",serif;color:var(--chili)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--chili)}
+.lang{border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:99px;padding:3px 16px;font:600 .95rem "Hind Siliguri",sans-serif;cursor:pointer}
+.lang:hover{background:var(--ink);color:var(--bg)}
+.lang:focus-visible,a:focus-visible,.btn:focus-visible{outline:3px solid var(--turmeric);outline-offset:3px}
+@media(max-width:620px){nav a{display:none}}
+.hero{margin-top:28px;background:var(--tint);border-radius:28px;padding:48px 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;overflow:hidden}
+@media(max-width:780px){.hero{grid-template-columns:1fr;padding:34px 22px}}
+.hero h1{font-size:clamp(2rem,5.4vw,3.3rem);font-weight:800;margin-bottom:14px}
+.hero p{color:var(--muted);max-width:46ch;font-size:1.1rem;margin:0 0 24px}
+.btn{display:inline-block;background:var(--btn);color:var(--btnink);text-decoration:none;padding:13px 28px;border-radius:12px;font-weight:600;box-shadow:var(--shadow);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none;margin-left:8px;padding:11px 26px}
+.spices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;transform:rotate(-4deg)}
+.dot{aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:2.4rem;box-shadow:var(--shadow);border:3px solid var(--card)}
+.dot:nth-child(1){background:var(--turmeric)}.dot:nth-child(2){background:var(--chili);margin-top:18px}.dot:nth-child(3){background:var(--leaf)}
+.dot:nth-child(4){background:var(--leaf);margin-top:-6px}.dot:nth-child(5){background:var(--turmeric);margin-top:12px}.dot:nth-child(6){background:var(--chili);margin-top:-6px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+@media(max-width:680px){.trust{grid-template-columns:1fr}}
+.trust div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-weight:600;display:flex;gap:12px;align-items:center}
+.trust span{font-size:1.5rem}
+section{padding:48px 0 8px}
+h2{font-size:1.85rem;margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .em{width:64px;height:64px;border-radius:50%;background:var(--tint);display:grid;place-items:center;font-size:2rem;margin-bottom:12px}
+.card h3{font-size:1.2rem;margin-bottom:4px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:.97rem;flex:1}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font:800 1.25rem "Noto Serif Bengali",serif;color:var(--leaf)}
+.ord{background:var(--btn);color:var(--btnink);text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 18px;border-radius:10px}
+.ord:hover{opacity:.9}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+@media(max-width:780px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 12px;color:var(--muted)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.facts li{border-left:5px solid var(--turmeric);padding:10px 16px;background:var(--card);border-radius:0 12px 12px 0}
+.contact{background:var(--leaf);color:#fff;border-radius:24px;padding:36px;margin-bottom:40px}
+:root[data-theme="dark"] .contact,:root:not([data-theme="light"]) .contact{--cc:1}
+.contact h2{color:#fff}
+.contact p{margin:6px 0;color:#f3f1e4}
+.contact .btn{background:#fff;color:#2f5d3a}
+footer{padding:28px 20px 90px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.92rem}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#25a244;color:#fff;display:grid;place-items:center;font-size:1.6rem;text-decoration:none;box-shadow:var(--shadow);z-index:12}
+.hero>*{animation:in .6s ease both}.hero>*:nth-child(2){animation-delay:.12s}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <div class="logo" data-i18n="brand">মশলা ঘর</div>
+  <nav>
+    <a href="#products" data-i18n="nav1">পণ্য</a>
+    <a href="#about" data-i18n="nav2">আমাদের কথা</a>
+    <a href="#contact" data-i18n="nav3">যোগাযোগ</a>
+    <button class="lang" id="lang" aria-label="Change language">English</button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1 data-i18n="h1">ঘরে তৈরি মশলা, সরাসরি আপনার রান্নাঘরে</h1>
+      <p data-i18n="sub">খাঁটি হলুদ, মরিচ, জিরা আর চা। আমরা নিজেরা গুঁড়া করি, তাই স্বাদ আর গন্ধ থাকে তাজা।</p>
+      <a class="btn" href="#products" data-i18n="cta1">পণ্য দেখুন</a>
+      <a class="btn alt" href="#contact" data-i18n="cta2">অর্ডার করুন</a>
+    </div>
+    <div class="spices" aria-hidden="true"><div class="dot">🌿</div><div class="dot">🌶️</div><div class="dot">🍃</div><div class="dot">🫚</div><div class="dot">🌾</div><div class="dot">🧄</div></div>
+  </div>
+
+  <div class="trust">
+    <div><span>🌱</span><b data-i18n="tr1">১০০% খাঁটি, কোনো ভেজাল নেই</b></div>
+    <div><span>🚚</span><b data-i18n="tr2">দ্রুত হোম ডেলিভারি</b></div>
+    <div><span>💯</span><b data-i18n="tr3">পছন্দ না হলে টাকা ফেরত</b></div>
+  </div>
+
+  <section id="products">
+    <h2 data-i18n="h2a">আমাদের পণ্য</h2>
+    <p class="lead" data-i18n="lead">যেটা পছন্দ, “অর্ডার করুন” চাপুন। WhatsApp-এ মেসেজ চলে যাবে।</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="about">
+    <h2 data-i18n="h2b">আমাদের কথা</h2>
+    <div class="about">
+      <div>
+        <p data-i18n="a1">২০১৮ সাল থেকে আমরা কৃষকদের কাছ থেকে সরাসরি মশলা কিনি। রোদে শুকানো, পরিষ্কার করা এবং ছোট ব্যাচে গুঁড়া করা হয়।</p>
+        <p data-i18n="a2">কোনো রং বা কৃত্রিম উপাদান মেশানো হয় না। পছন্দ না হলে টাকা ফেরত।</p>
+      </div>
+      <ul class="facts">
+        <li data-i18n="f1">কৃষকের কাছ থেকে সরাসরি সংগ্রহ</li>
+        <li data-i18n="f2">ছোট ব্যাচে গুঁড়া, তাই সবসময় তাজা</li>
+        <li data-i18n="f3">ঢাকার ভেতরে একই দিনে ডেলিভারি</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2 data-i18n="h2c">অর্ডার বা প্রশ্ন?</h2>
+      <p data-i18n="c1">WhatsApp বা ফোনে জানান। আমরা দ্রুত উত্তর দিই।</p>
+      <p><strong data-i18n="phoneL">ফোন:</strong> <span dir="ltr" id="phone"></span></p>
+      <p><strong data-i18n="addrL">ঠিকানা:</strong> <span data-i18n="addr">আপনার দোকানের ঠিকানা এখানে লিখুন</span></p>
+      <p><strong data-i18n="hrsL">খোলা থাকে:</strong> <span data-i18n="hrs">শনি–বৃহস্পতিবার, সকাল ১০টা থেকে রাত ৮টা</span></p>
+      <p style="margin-top:16px"><a class="btn" id="wa" href="#" data-i18n="wa">WhatsApp-এ মেসেজ করুন</a></p>
+    </div>
+  </section>
+</main>
+<a class="fab" id="fab" href="#" aria-label="WhatsApp">💬</a>
+<footer data-i18n="foot">© ২০২৬ মশলা ঘর। সর্বস্বত্ব সংরক্ষিত।</footer>
+
+<script>
+/* =====================================================
+   ✏️ এডিট করার নিয়ম (HOW TO EDIT)
+   শুধু এই ফাইলের নিচের "SETTINGS", "T" আর "P" অংশ বদলান।
+   বাকি কোড (CSS/HTML) না ছুঁলেও চলবে।
+   ১) SETTINGS: ফোন নম্বর, WhatsApp নম্বর, রং
+   ২) T: বাংলা (bn) ও ইংরেজি (en) লেখা। দুই ভাষায়ই বদলান।
+   ৩) P: পণ্যের তালিকা। একটা পণ্য = একটা { ... } লাইন।
+      নতুন পণ্য যোগ করতে একটা লাইন কপি করে নাম/দাম বদলান।
+      e = ইমোজি, p = দাম (টাকায়)
+   ৪) ফাইলটি সেভ করে ব্রাউজারে খুলুন (double-click)।
+   ===================================================== */
+var SETTINGS={
+  phone:"+8801601849358",     // আপনার ফোন নম্বর
+  whatsapp:"+8801969682442"      // WhatsApp নম্বর, শুরুতে 880, + বা ফাঁকা ছাড়া
+};
+/* T = সব লেখা (বাংলা ও ইংরেজি) */
+var T={
+bn:{brand:"মশলা ঘর",nav1:"পণ্য",nav2:"আমাদের কথা",nav3:"যোগাযোগ",h1:"ঘরে তৈরি মশলা, সরাসরি আপনার রান্নাঘরে",sub:"খাঁটি হলুদ, মরিচ, জিরা আর চা। আমরা নিজেরা গুঁড়া করি, তাই স্বাদ আর গন্ধ থাকে তাজা।",cta1:"পণ্য দেখুন",tr1:"১০০% খাঁটি, কোনো ভেজাল নেই",tr2:"দ্রুত হোম ডেলিভারি",tr3:"পছন্দ না হলে টাকা ফেরত",lead:"যেটা পছন্দ, “অর্ডার করুন” চাপুন। WhatsApp-এ মেসেজ চলে যাবে।",cta2:"অর্ডার করুন",h2a:"আমাদের পণ্য",h2b:"আমাদের কথা",a1:"২০১৮ সাল থেকে আমরা কৃষকদের কাছ থেকে সরাসরি মশলা কিনি। রোদে শুকানো, পরিষ্কার করা এবং ছোট ব্যাচে গুঁড়া করা হয়।",a2:"কোনো রং বা কৃত্রিম উপাদান মেশানো হয় না। পছন্দ না হলে টাকা ফেরত।",f1:"কৃষকের কাছ থেকে সরাসরি সংগ্রহ",f2:"ছোট ব্যাচে গুঁড়া, তাই সবসময় তাজা",f3:"ঢাকার ভেতরে একই দিনে ডেলিভারি",h2c:"অর্ডার বা প্রশ্ন?",c1:"WhatsApp বা ফোনে জানান। আমরা দ্রুত উত্তর দিই।",phoneL:"ফোন:",addrL:"ঠিকানা:",addr:"আপনার দোকানের ঠিকানা এখানে লিখুন",hrsL:"খোলা থাকে:",hrs:"শনি–বৃহস্পতিবার, সকাল ১০টা থেকে রাত ৮টা",wa:"WhatsApp-এ মেসেজ করুন",foot:"© ২০২৬ মশলা ঘর। সর্বস্বত্ব সংরক্ষিত।",btn:"English"},
+en:{brand:"Moshla Ghor",nav1:"Products",nav2:"About",nav3:"Contact",h1:"Home-ground spices, straight to your kitchen",sub:"Pure turmeric, chili, cumin and tea. We grind in small batches, so the flavor and aroma stay fresh.",cta1:"See products",tr1:"100% pure, no fillers",tr2:"Fast home delivery",tr3:"Money back if not happy",lead:"Pick what you like and tap “Order now”. It opens a WhatsApp message.",cta2:"Order now",h2a:"Our products",h2b:"About us",a1:"Since 2018 we have bought spices directly from farmers. They are sun-dried, cleaned and ground in small batches.",a2:"Nothing artificial is added, no colors or fillers. Not happy? Get your money back.",f1:"Sourced directly from farmers",f2:"Ground in small batches, always fresh",f3:"Same-day delivery inside Dhaka",h2c:"Want to order or ask something?",c1:"Message us on WhatsApp or call. We reply quickly.",phoneL:"Phone:",addrL:"Address:",addr:"Write your shop address here",hrsL:"Open:",hrs:"Saturday to Thursday, 10 AM to 8 PM",wa:"Message on WhatsApp",foot:"© 2026 Moshla Ghor. All rights reserved.",btn:"বাংলা"}
+};
+/* P = পণ্যের তালিকা */
+var P=[
+{e:"🌿",bn:["হলুদ গুঁড়া","গাঢ় রঙ, তীব্র গন্ধ। ২৫০ গ্রাম।"],en:["Turmeric powder","Deep color, strong aroma. 250 g."],p:180},
+{e:"🌶️",bn:["শুকনা মরিচ গুঁড়া","ঝাল আর রঙ দুটোই ভালো। ২৫০ গ্রাম।"],en:["Chili powder","Good heat and color. 250 g."],p:260},
+{e:"🫚",bn:["জিরা","বাছাই করা আস্ত জিরা। ১০০ গ্রাম।"],en:["Cumin seeds","Hand-picked whole seeds. 100 g."],p:140},
+{e:"🍃",bn:["সিলেটি চা পাতা","কড়া লিকার, সুন্দর ঘ্রাণ। ২৫০ গ্রাম।"],en:["Sylhet tea leaves","Strong liquor, lovely scent. 250 g."],p:220},
+{e:"🧄",bn:["গরম মশলা মিক্স","এলাচ, দারুচিনি, লবঙ্গ। ১০০ গ্রাম।"],en:["Garam masala mix","Cardamom, cinnamon, clove. 100 g."],p:200},
+{e:"🌾",bn:["ধনিয়া গুঁড়া","হালকা মিষ্টি ঘ্রাণ। ২৫০ গ্রাম।"],en:["Coriander powder","Light, sweet aroma. 250 g."],p:150}
+];
+var cur="bn";
+function digits(n){return cur==="bn"?String(n).replace(/\d/g,function(d){return "০১২৩৪৫৬৭৮৯"[d]}):String(n)}
+function render(){
+  var t=T[cur];document.documentElement.lang=cur;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(t[k])el.textContent=t[k]});
+  document.getElementById("lang").textContent=t.btn;
+  document.getElementById("grid").innerHTML=P.map(function(x){var c=x[cur];
+    return '<div class="card"><div class="em">'+x.e+'</div><h3>'+c[0]+'</h3><p>'+c[1]+'</p><div class="foot"><div class="price">৳ '+digits(x.p)+'</div><a class="ord" href="https://wa.me/'+SETTINGS.whatsapp+'?text='+encodeURIComponent(c[0])+'">'+t.cta2+'</a></div></div>'}).join("");
+  document.title=t.brand;
+  document.getElementById("phone").textContent=SETTINGS.phone;
+  document.getElementById("wa").href="https://wa.me/"+SETTINGS.whatsapp;
+  document.getElementById("fab").href="https://wa.me/"+SETTINGS.whatsapp;
+}
+document.getElementById("lang").onclick=function(){cur=cur==="bn"?"en":"bn";render();try{localStorage.setItem("lang",cur)}catch(e){}};
+try{var s=localStorage.getItem("lang");if(s==="en"||s==="bn")cur=s}catch(e){}
+render();
+</script>
+</body>
+</html>
